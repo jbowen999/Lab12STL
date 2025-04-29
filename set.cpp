@@ -39,7 +39,23 @@ int main() {
 				cout << num << " is NOT in the set" << endl;
 			}
 			cout << endl;
-		}
-
+		} else if (input == "d") {
+		    int num;
+		    cout << "Enter a number:";
+		    cin >> num;
+		    cout << endl;
+		    if (!numbers.count(num)) {
+		        cout << num << " is NOT in the set" << endl;
+		    } else {
+		        numbers.erase(num);
+		        cout << num << " removed from set" << endl;
+		        cout << "Your Set: ";
+	            for (auto number : numbers) {
+		        cout << number << " ";
+		  
+	            }
+	            cout << endl;
+		    }
+        }
 	}
 }
